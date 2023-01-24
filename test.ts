@@ -1,1 +1,16 @@
-// tests go here; this will not be compiled when this package is used as an extension.
+//% color="#99AAA3"
+//% icon="\uf295"
+namespace Chances {
+
+    /**
+     * A custom chance event.
+     */
+    //% block="on event with chance $numbers"
+    export function onEventWithArgs(numbers: number, handler: () => void) {
+        if (Math.percentChance(numbers)) {
+            handler();
+        }
+
+    }
+
+}
